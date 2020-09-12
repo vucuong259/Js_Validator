@@ -18,7 +18,7 @@
 
             <div class="form-group">
                 <label for="fullname" class="form-label">Tên đầy đủ</label>
-                <input id="fullname" name="fullname" type="text" placeholder="VD: Sơn Đặng" class="form-control">
+                <input id="fullname" name="fullname" type="text" placeholder="VD: Cường Vũ" class="form-control">
                 <span class="form-message"></span>
             </div>
 
@@ -45,7 +45,18 @@
 
     </div>
     <script src="JS/main.js"></script>
-    <script></script>
+    <script>
+        Validator({
+            idForm: '#form-1',
+            inputClass: '.form-group',
+            rules: [
+                Validator.isRequire('#fullname'),
+                Validator.isRequire('#password'),
+                Validator.isEmail('#email'),
+                Validator.isRequire('#email')
+            ]
+        });
+    </script>
 </body>
 
 </html>
